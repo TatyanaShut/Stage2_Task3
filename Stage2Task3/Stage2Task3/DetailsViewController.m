@@ -15,7 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"Details";
      UIView * customView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     customView.backgroundColor = [UIColor colorWithRed:0xFE/255.0f
                                                  green:0xF6/255.0f
