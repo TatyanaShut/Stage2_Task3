@@ -46,8 +46,8 @@ self.urlArray = @[@"http://www.designerspics.com/wp-content/uploads/2014/06/lapt
 
 for (int index = 0; index < self.urlArray.count; index++) {
     NSMutableDictionary *imageInfo = [@{
-                                        @"defaultImage": cell.myImageView,
-                                        @"defaultText": cell.urlLabel
+                                        @"image": cell.myImageView,
+                                        @"text": cell.urlLabel
                                         } mutableCopy];
     
     [self.tableDataModel addObject:imageInfo];
