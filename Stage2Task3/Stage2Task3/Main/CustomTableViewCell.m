@@ -24,11 +24,10 @@
         [self.contentView addSubview:self.urlLabel];
         
         self.myImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"noPhoto"]];
-        self.urlLabel.text = @"NO";
+        self.urlLabel.text = @"NO description";
         [self.contentView addSubview:self.myImageView];
         [self addConstraint];
         [self.myImageView setUserInteractionEnabled:YES];
-        [self addGestureRecognizer];
         UIView *view =[[UIView alloc]init];
         view.backgroundColor = [UIColor colorWithRed:0xFE/255.0f
                                                green:0xF6/255.0f
@@ -63,20 +62,6 @@
     [self.contentView addConstraint:trailing];
     [self.contentView addConstraint:distance];
 }
--(void)addGestureRecognizer{
-    
-    
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
-                                          initWithTarget:self action:@selector(tapImage:)];
-    tapGesture.numberOfTapsRequired = 1;
-    [self.myImageView addGestureRecognizer:tapGesture];
-}
 
-- (void)tapImage:(UITapGestureRecognizer *)gesture
-{
-    if (_delegate) {
-        [_delegate showInfoControllerWithContact];
-    }
-}
 
 @end

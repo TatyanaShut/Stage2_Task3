@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ArrayOfImages.h"
+#import "CustomTableViewCell.h"
+
 
 @interface ViewController : UIViewController
 

@@ -7,7 +7,6 @@
 //
 
 #import "DetailsViewController.h"
-
 @interface DetailsViewController ()
 
 @end
@@ -16,17 +15,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+     UIView * customView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    customView.backgroundColor = [UIColor colorWithRed:0xFE/255.0f
+                                                 green:0xF6/255.0f
+                                                  blue:0xE6/255.0f alpha:1];
+    [self.view addSubview:customView];
+    self.view.translatesAutoresizingMaskIntoConstraints = NO;
+
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:self.imageFull];
+    [customView addSubview:imageView];
+    
+    
+  
+    
+    if(imageView.frame.size.width > self.view.frame.size.width ||  imageView.frame.size.height > self.view.frame.size.height) {
+
+        imageView.frame = CGRectMake(0, 0, self.view.frame.size.width, imageView.frame.size.height);
+        imageView.center = imageView.superview.center;
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+    }
+    else{
+        
+        imageView.center = imageView.superview.center;
+    }
+    
+    
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *backButtonnImage = [UIImage imageNamed:@"arrow_left"];
+    [backButton setBackgroundImage:backButtonnImage forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton] ;
+    self.navigationItem.leftBarButtonItem = backBarButtonItem;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)goBack{
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
 
 @end
