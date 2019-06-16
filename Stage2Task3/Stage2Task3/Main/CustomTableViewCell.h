@@ -15,6 +15,7 @@
 @end
 
 @interface CustomTableViewCell : UITableViewCell
+@property (nonatomic, strong) UIImageView* myImageView;
 @property (nonatomic, assign) NSInteger indexCell;
 @property(nonatomic,retain) UILabel *urlLabel;
 @property (nonatomic, weak) id<TableViewCellDelegate>delegate;

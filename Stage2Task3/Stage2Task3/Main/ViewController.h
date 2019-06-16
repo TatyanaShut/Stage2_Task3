@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ArrayOfImages.h"
 
 @interface ViewController : UIViewController
-
+//@property(nonatomic, strong) ArrayOfImages * mainArray;
 
 @end
 
