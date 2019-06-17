@@ -117,6 +117,11 @@ for (int index = 0; index < self.urlArray.count; index++) {
         cell.urlLabel.text = downloadImage;
         cell.myImageView.contentMode = UIViewContentModeScaleAspectFit;
     }
+    else{
+        
+        cell.myImageView.image = [imageInfo objectForKey:@"defaultImage"];
+        cell.urlLabel.text = [imageInfo objectForKey:@"defaultText"];
+    }
 
    cell.layer.masksToBounds = YES;
    [cell.urlLabel sizeToFit];
