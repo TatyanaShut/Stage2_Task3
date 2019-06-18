@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "NoInternetViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,12 +19,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
-    ViewController * vc = [[ViewController alloc]init];
-    UINavigationController * nvc = [[UINavigationController alloc]initWithRootViewController:vc];
-    [self.window setRootViewController:nvc];
+    
+    ViewController *vc = [[ViewController alloc]init];
+    NoInternetViewController *noInternerVC =[[NoInternetViewController alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc]initWithRootViewController:vc];
+    (![noInternerVC hasInternet]) ?  [self.window setRootViewController:noInternerVC] :  [self.window setRootViewController:nvc];
     [self.window makeKeyAndVisible];
     
-   
     return YES;
 }
 

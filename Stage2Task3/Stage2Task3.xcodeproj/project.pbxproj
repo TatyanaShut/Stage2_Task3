@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10014A5722B8D001008CF2AA /* NoInternetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10014A5622B8D001008CF2AA /* NoInternetViewController.m */; };
+		10014A7522B954B8008CF2AA /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 10014A7422B954B8008CF2AA /* DataSource.m */; };
 		108D719222B6D21A00D4DC6E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108D719122B6D21A00D4DC6E /* ViewController.m */; };
 		108D719422B6D22B00D4DC6E /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 108D719322B6D22B00D4DC6E /* DetailsViewController.m */; };
 		108D719822B6D24800D4DC6E /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 108D719722B6D24800D4DC6E /* CustomTableViewCell.m */; };
@@ -18,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10014A5522B8D001008CF2AA /* NoInternetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoInternetViewController.h; sourceTree = "<group>"; };
+		10014A5622B8D001008CF2AA /* NoInternetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoInternetViewController.m; sourceTree = "<group>"; };
+		10014A7322B954B8008CF2AA /* DataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		10014A7422B954B8008CF2AA /* DataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		108D719122B6D21A00D4DC6E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		108D719322B6D22B00D4DC6E /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		108D719522B6D23400D4DC6E /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
@@ -45,6 +51,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10014A7722B9897F008CF2AA /* MainCell */ = {
+			isa = PBXGroup;
+			children = (
+				108D719922B6D25000D4DC6E /* CustomTableViewCell.h */,
+				108D719722B6D24800D4DC6E /* CustomTableViewCell.m */,
+			);
+			path = MainCell;
+			sourceTree = "<group>";
+		};
+		10014A7822B9899D008CF2AA /* TheInternet */ = {
+			isa = PBXGroup;
+			children = (
+				10014A5522B8D001008CF2AA /* NoInternetViewController.h */,
+				10014A5622B8D001008CF2AA /* NoInternetViewController.m */,
+			);
+			path = TheInternet;
+			sourceTree = "<group>";
+		};
+		10014A7922B98A38008CF2AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				10014A7322B954B8008CF2AA /* DataSource.h */,
+				10014A7422B954B8008CF2AA /* DataSource.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		10014A7A22B98A4A008CF2AA /* DetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				108D719322B6D22B00D4DC6E /* DetailsViewController.m */,
+				108D719522B6D23400D4DC6E /* DetailsViewController.h */,
+			);
+			path = DetailVC;
+			sourceTree = "<group>";
+		};
 		10A11E8E22B661E2001C50E9 = {
 			isa = PBXGroup;
 			children = (
@@ -64,19 +106,19 @@
 		10A11E9922B661E3001C50E9 /* Stage2Task3 */ = {
 			isa = PBXGroup;
 			children = (
-				10A11E9A22B661E3001C50E9 /* AppDelegate.h */,
 				10A11E9B22B661E3001C50E9 /* AppDelegate.m */,
-				10A11EA022B661E3001C50E9 /* Main.storyboard */,
+				10A11E9A22B661E3001C50E9 /* AppDelegate.h */,
 				108D719122B6D21A00D4DC6E /* ViewController.m */,
 				108D719622B6D23D00D4DC6E /* ViewController.h */,
-				108D719922B6D25000D4DC6E /* CustomTableViewCell.h */,
-				108D719722B6D24800D4DC6E /* CustomTableViewCell.m */,
-				108D719322B6D22B00D4DC6E /* DetailsViewController.m */,
-				108D719522B6D23400D4DC6E /* DetailsViewController.h */,
-				10A11EA322B661E7001C50E9 /* Assets.xcassets */,
+				10014A7A22B98A4A008CF2AA /* DetailVC */,
+				10014A7722B9897F008CF2AA /* MainCell */,
+				10014A7822B9899D008CF2AA /* TheInternet */,
+				10014A7922B98A38008CF2AA /* Model */,
 				10A11EA522B661E7001C50E9 /* LaunchScreen.storyboard */,
+				10A11EA022B661E3001C50E9 /* Main.storyboard */,
 				10A11EA822B661E7001C50E9 /* Info.plist */,
 				10A11EA922B661E7001C50E9 /* main.m */,
+				10A11EA322B661E7001C50E9 /* Assets.xcassets */,
 			);
 			path = Stage2Task3;
 			sourceTree = "<group>";
@@ -152,7 +194,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				108D719222B6D21A00D4DC6E /* ViewController.m in Sources */,
+				10014A7522B954B8008CF2AA /* DataSource.m in Sources */,
 				10A11EAA22B661E7001C50E9 /* main.m in Sources */,
+				10014A5722B8D001008CF2AA /* NoInternetViewController.m in Sources */,
 				10A11E9C22B661E3001C50E9 /* AppDelegate.m in Sources */,
 				108D719822B6D24800D4DC6E /* CustomTableViewCell.m in Sources */,
 				108D719422B6D22B00D4DC6E /* DetailsViewController.m in Sources */,

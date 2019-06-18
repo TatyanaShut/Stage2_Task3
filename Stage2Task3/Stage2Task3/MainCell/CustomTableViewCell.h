@@ -11,7 +11,8 @@
 
 
 @interface CustomTableViewCell : UITableViewCell
-@property (nonatomic, strong) UIImageView* myImageView;
+
+@property (nonatomic, strong) UIImageView* imageFromUrlView;
 @property(nonatomic,retain) UILabel *urlLabel;
 
 @end

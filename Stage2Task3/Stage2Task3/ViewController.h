@@ -7,11 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CustomTableViewCell.h"
-
 
 @interface ViewController : UIViewController
 
-
 @end
-

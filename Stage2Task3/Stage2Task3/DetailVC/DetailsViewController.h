@@ -9,7 +9,9 @@
 #import "ViewController.h"
 
 @interface DetailsViewController : ViewController
+
 @property(nonatomic, strong) UIImage *imageFull;
+
 @end
 
 
